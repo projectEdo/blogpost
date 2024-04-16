@@ -1,0 +1,17 @@
+{% extends 'blog/layout.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+		<div class="features">
+			<div class="container">
+				<form method="post">
+					{% csrf_token %}
+					{{ form.username }}<br>
+					{{ form.password }}<br>
+					<span>{{ error }}</span><br>
+					<button class="btn btn-success" type="submit">Войти</button>
+				</form>
+			</div>
+		</div>
+{% endblock %}

@@ -1,0 +1,214 @@
+body {
+	background: #2c2c2c;
+}
+
+.container {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* .container {
+	padding: 10px 35px;
+	max-width: 1230px;
+} */
+
+.bookmarks {
+	padding: 10px 0;
+	background: #181818;
+	display: flex;
+}
+
+.bookmarks p {
+	margin-bottom: 0;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.nav p {
+	width: 222.95px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	width: 80px;
+}
+
+.logo span {
+	font-weight: bold;
+	font-size: 34px;
+	margin-left: 10px;
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.b {
+	width: 105px;
+}
+
+.list a {
+	font-size: 20px;
+	color:#fff;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.list i {
+	width: 25px;
+}
+
+.logo ul {
+	list-style: none;
+}
+
+
+main .features {
+	margin: auto;
+	color: #fff;
+	padding: 100px 0;
+	text-align: center;
+}
+
+main .features h1 {
+	font-size: 50px;
+}
+
+/* main .features p {
+	max-width: 400px;
+	margin: 20px auto;
+} */
+
+.alert-warning {
+	width: 400px;
+	margin: 50px auto;
+	text-align: left;
+}
+
+.detail {
+	margin: auto;
+	color: #fff;
+	padding-top: 100px;
+}
+
+.post-create-form {
+	margin-left: 32%;
+	width: 500px;
+	margin-top: 50px;
+}
+
+.post {
+	display: block;
+	margin-top: 50px;
+	/* grid-template-columns: 1fr 1fr; */
+}
+
+.post h1 {
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.post-image {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	/* width: 615px; */
+}
+
+.post-image img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+}
+
+.post-info {
+	width: 1000px;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+ 
+.post-info pre {
+	font-size: 20px;
+	margin-top: 50px;
+	text-wrap: wrap;
+	text-indent: 85px;
+	width: 1000px;
+	text-align: justify;
+}
+
+.post-info p {
+	text-align: end;
+}
+
+.post-info-btn {
+	display: flex;
+	justify-content: end;
+}
+
+.post-info-full-text {
+	margin-top: 30px;
+	text-align: justify;
+	width: 100%;
+}
+
+.index {
+	width: 550px;
+	margin: 0 auto;
+}
+
+.index h1 {
+	font-size: 40px;
+}
+
+.index p {
+	text-align: justify;
+	margin-bottom: 0px;
+	text-indent: 25px;
+}
+
+.comment {
+	display: block;
+	text-align: left;
+	margin-left: 20px;
+}
+
+.comment-create {
+	display: flex;
+	width: 100%;
+	text-align: right;
+	column-gap: 10px;
+}
+
+.comment-input {
+	height: 50px;
+	width: 600px;
+}
+
+.comment-views {
+	padding: 30px;
+	height: 500px;
+}
+
+.comment-views-title{
+	display: flex;
+	justify-content: space-between;
+}
+
+.comment-delete {
+	width: 25px;
+	float: right;
+}

@@ -1,0 +1,51 @@
+{% extends 'blog/layout.html' %}
+{% load static %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+	<div class="detail">	
+		<div class="container">
+			<div class="post-info-btn">
+				{% if article.author == user %}
+					<a href="{% url 'blogs-delete' article.id %}" class="btn btn-danger">Удалить</a>
+					<a href="{% url 'blogs-update' article.id %}" class="btn btn-info">Редактировать</a>
+				{% endif %}
+			</div>
+			<div class="post">
+				<h1> {{ article.title }}</h1>
+				<div class="post-image">
+					{% if article.image %}
+						<img src="{{ MEDIA_URL }} {{ article.image.url }}" alt="">
+					{% else %}
+						<p>Изображение отсуствует</p>
+					{% endif %}
+				</div>
+				<div class="post-info">
+					<pre>{{ article.full_text }}</pre>
+					<p>{{ article.author.first_name }}, {{ article.date }}</p>
+				</div>
+			</div>
+			<hr>
+			<div class="comment">
+					<form class="comment-create" action="" method="post">
+						{% csrf_token %}
+						{{ form.text }} <br>
+						<button class="btn btn-success" name="comment_create" type="submit">Добавить</button>
+					</form>
+
+					<div class="comment-views">
+						{% for el in comment %}
+							<div class="comment-views-title">
+								<h5>{{ el.author.first_name}}</h5>
+								{{ el.date_created }}
+							</div>
+							
+							<p>{{ el.text }}</p>
+							<hr>
+						{% endfor %}
+					</div>
+			</div>
+	</div>
+	</div>
+{% endblock %}
